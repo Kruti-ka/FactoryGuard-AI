@@ -30,9 +30,9 @@ factoryguard-ai/
 
 ## 👥 Team Roles
 
-- **Member A (Data Specialist)**: Data ingestion, cleaning, baseline models
-- **Member B (Feature Engineer)**: Temporal feature engineering, model training
-- **Member C (Leader)**: Integration, validation, hyperparameter tuning
+- **Akshada (Data Specialist)**: Data ingestion, cleaning, baseline models
+- **Harish (Feature Engineer)**: Temporal feature engineering, model training
+- **Krutika (Leader)**: Integration, validation, hyperparameter tuning
 
 ## 📅 4-Week Implementation Plan
 

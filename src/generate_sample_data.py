@@ -5,6 +5,7 @@ This script generates synthetic sensor data for development and testing purposes
 
 import pandas as pd
 import numpy as np
+import os
 from datetime import datetime, timedelta
 
 
@@ -13,7 +14,8 @@ def generate_sample_sensor_data(
     n_days=30,
     hourly_samples=1,
     failure_rate=0.005,
-    output_path='data/raw/sensor_logs.csv'
+    output_path='../data/raw/sensor_logs.csv'
+
 ):
     """
     Generate synthetic sensor data for testing
@@ -89,6 +91,12 @@ def generate_sample_sensor_data(
     
     # Create DataFrame
     df = pd.DataFrame(data)
+    
+    # **FIX: Create output directory if it doesn't exist**
+    output_dir = os.path.dirname(output_path)
+    if output_dir:  # Only create if there's a directory component
+        os.makedirs(output_dir, exist_ok=True)
+        print(f"\n✓ Created directory: {output_dir}")
     
     # Save to CSV
     df.to_csv(output_path, index=False)

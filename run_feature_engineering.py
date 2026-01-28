@@ -76,7 +76,7 @@ def main():
     os.makedirs("data/processed", exist_ok=True)
     df.to_csv(output_path, index=False)
 
-    print("\nSUCCESS ✅")
+    print("\nSUCCESS ")
     print("Saved:", output_path)
     print("Final Shape:", df.shape)
 

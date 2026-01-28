@@ -25,7 +25,7 @@ def main():
     
     # Step 1: Generate sample data (if not exists)
     if not os.path.exists('data/raw/sensor_logs.csv'):
-        print("\n⚠️  No raw data found. Generating sample data...")
+        print("\nWARNING: No raw data found. Generating sample data...")
         sys.path.append('src')
         from generate_sample_data import generate_sample_sensor_data
         generate_sample_sensor_data(
@@ -49,16 +49,16 @@ def main():
     generate_cleaning_report(cleaned_df)
     
     print("\n" + "=" * 70)
-    print("✅ AKSHADA'S TASKS COMPLETE!")
+    print("SUCCESS: AKSHADA'S TASKS COMPLETE!")
     print("=" * 70)
-    print("\n📦 Deliverables:")
-    print("  ✓ Clean dataset: data/processed/clean_data.csv")
-    print("  ✓ Target variable: 'failure_within_24h' created")
-    print("  ✓ Missing values handled")
-    print("  ✓ Outliers removed")
-    print("\n📊 Next Steps:")
-    print("  → Hand off to Harish for feature engineering")
-    print("  → Prepare for Week 2 baseline modeling")
+    print("\nDeliverables:")
+    print("  * Clean dataset: data/processed/clean_data.csv")
+    print("  * Target variable: 'failure_within_24h' created")
+    print("  * Missing values handled")
+    print("  * Outliers removed")
+    print("\nNext Steps:")
+    print("  -> Hand off to Harish for feature engineering")
+    print("  -> Prepare for Week 2 baseline modeling")
     
 
 def generate_cleaning_report(df):
@@ -83,7 +83,7 @@ def generate_cleaning_report(df):
         plt.text(i, v + 100, str(v), ha='center', fontweight='bold')
     plt.tight_layout()
     plt.savefig('reports/akshada_class_distribution.png', dpi=300)
-    print("✓ Saved: reports/akshada_class_distribution.png")
+    print("* Saved: reports/akshada_class_distribution.png")
     plt.close()
     
     # 2. Sensor Statistics After Cleaning
@@ -99,7 +99,7 @@ def generate_cleaning_report(df):
     
     plt.tight_layout()
     plt.savefig('reports/akshada_sensor_distributions.png', dpi=300)
-    print("✓ Saved: reports/akshada_sensor_distributions.png")
+    print("* Saved: reports/akshada_sensor_distributions.png")
     plt.close()
     
     # 3. Summary Statistics Report
@@ -134,16 +134,16 @@ def generate_cleaning_report(df):
         
         f.write("TASKS COMPLETED\n")
         f.write("-" * 70 + "\n")
-        f.write("✓ Missing value imputation (interpolation method)\n")
-        f.write("✓ Outlier removal (4 standard deviations)\n")
-        f.write("✓ Target variable creation (24-hour failure window)\n")
-        f.write("✓ Data validation checks\n\n")
+        f.write("* Missing value imputation (interpolation method)\n")
+        f.write("* Outlier removal (4 standard deviations)\n")
+        f.write("* Target variable creation (24-hour failure window)\n")
+        f.write("* Data validation checks\n\n")
         
         f.write("=" * 70 + "\n")
         f.write("Ready for Feature Engineering (Harish)\n")
         f.write("=" * 70 + "\n")
     
-    print("✓ Saved: reports/akshada_cleaning_summary.txt")
+    print("* Saved: reports/akshada_cleaning_summary.txt")
     
 
 if __name__ == "__main__":

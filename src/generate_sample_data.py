@@ -14,7 +14,7 @@ def generate_sample_sensor_data(
     n_days=30,
     hourly_samples=1,
     failure_rate=0.005,
-    output_path='../data/raw/sensor_logs.csv'
+    output_path='data/raw/sensor_logs.csv'
 
 ):
     """

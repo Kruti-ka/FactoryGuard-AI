@@ -1,0 +1,42 @@
+{
+  "total_rows": 7016,
+  "total_columns": 29,
+  "missing_values": 0,
+  "all_columns": [
+    "timestamp",
+    "machine_id",
+    "vibration",
+    "temperature",
+    "pressure",
+    "failure",
+    "failure_within_24h",
+    "hour",
+    "day",
+    "month",
+    "day_of_week",
+    "vibration_lag_1",
+    "vibration_lag_2",
+    "vibration_lag_3",
+    "temperature_lag_1",
+    "temperature_lag_2",
+    "temperature_lag_3",
+    "pressure_lag_1",
+    "pressure_lag_2",
+    "pressure_lag_3",
+    "vibration_roll_mean_3",
+    "vibration_roll_mean_6",
+    "vibration_roll_mean_12",
+    "temperature_roll_mean_3",
+    "temperature_roll_mean_6",
+    "temperature_roll_mean_12",
+    "pressure_roll_mean_3",
+    "pressure_roll_mean_6",
+    "pressure_roll_mean_12"
+  ],
+  "target_distribution": {
+    "0": 6431,
+    "1": 585
+  },
+  "rows_dropped": 110,
+  "retention_percentage": 98.46
+}

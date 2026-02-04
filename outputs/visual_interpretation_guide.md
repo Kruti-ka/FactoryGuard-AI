@@ -2,8 +2,7 @@ Objective
 
 To visualize and interpret model predictions using Explainable AI (SHAP) techniques and improve model transparency.
 
-Global Interpretation
-SHAP Summary Plot
+Global Interpretation – SHAP Summary Plot
 
 Shows global feature importance across all test samples.
 Temperature rolling mean and vibration-based features are the most influential in predicting machine failure. This helps identify the most critical sensor parameters affecting system health.
@@ -13,8 +12,7 @@ SHAP Beeswarm Plot
 Displays the distribution of SHAP values across all samples.
 High temperature values contribute positively to failure risk, while low values reduce failure probability. This plot also shows the spread and variability of feature impact.
 
-Local Interpretation
-Waterfall (Local Explanation) Plots
+Local Interpretation – Waterfall (Local Explanation) Plots
 
 Explain individual machine predictions.
 Each bar shows how a feature pushes the prediction towards failure or non-failure. This helps understand decision-making at the single machine level.

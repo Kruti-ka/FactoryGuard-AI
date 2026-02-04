@@ -41,21 +41,21 @@ Features ranked by mean absolute SHAP value:
 
 ```
                  feature  mean_abs_shap  mean_shap  std_shap  max_abs_shap  rank
-             temperature       1.334548   0.078046  1.858959      7.502545     1
-                pressure       1.148521  -0.048675  1.451067      5.294458     2
-   pressure_roll_mean_12       0.981170   0.081006  1.182746      3.805513     3
-   vibration_roll_mean_6       0.858650  -0.088456  1.127669      4.389547     4
-  vibration_roll_mean_12       0.653923  -0.074085  0.846256      3.172183     5
- temperature_roll_mean_3       0.587403   0.027174  0.878336      3.665018     6
-    pressure_roll_mean_3       0.581912  -0.018666  0.719196      2.426629     7
-    pressure_roll_mean_6       0.415480   0.020092  0.512046      1.667046     8
-          pressure_lag_2       0.411921  -0.015566  0.510761      1.831415     9
-               vibration       0.309519  -0.044932  0.393004      1.440035    10
-                    hour       0.284586  -0.015154  0.329671      0.575007    11
-temperature_roll_mean_12       0.271985  -0.003258  0.409764      1.519343    12
-       temperature_lag_1       0.250529   0.023234  0.356382      1.502575    13
-          pressure_lag_3       0.246385   0.019426  0.306928      1.024695    14
-             day_of_week       0.235193   0.023442  0.263364      0.450808    15
+temperature_roll_mean_12       3.447581   0.171966  4.299312     14.375302     1
+ temperature_roll_mean_6       1.318031  -0.115620  1.658347      5.566015     2
+             temperature       1.144869  -0.118393  1.456776      5.527210     3
+ temperature_roll_mean_3       0.792528  -0.093453  0.999481      3.588851     4
+   vibration_roll_mean_6       0.755275  -0.127265  0.890722      3.348985     5
+       temperature_lag_1       0.694214  -0.109758  0.878826      2.986163     6
+  vibration_roll_mean_12       0.592989  -0.068318  0.699022      2.570210     7
+       temperature_lag_3       0.552673  -0.064597  0.689495      2.454383     8
+               vibration       0.453479  -0.084523  0.566020      1.988819     9
+                pressure       0.437495  -0.074695  0.544792      1.977794    10
+    pressure_roll_mean_6       0.426397  -0.059000  0.531426      2.051106    11
+       temperature_lag_2       0.389111  -0.029175  0.492352      1.770649    12
+   pressure_roll_mean_12       0.257216   0.035144  0.321664      1.256211    13
+                    hour       0.213139  -0.002576  0.246371      0.423543    14
+   vibration_roll_mean_3       0.189966  -0.036066  0.227964      0.850354    15
 ```
 
 ======================================================================
@@ -64,29 +64,29 @@ temperature_roll_mean_12       0.271985  -0.003258  0.409764      1.519343    12
 
 **Top 5 Most Important Features:**
 
-1. **temperature**
-   - Mean |SHAP|: 1.3345
-   - Mean SHAP: 0.0780
+1. **temperature_roll_mean_12**
+   - Mean |SHAP|: 3.4476
+   - Mean SHAP: 0.1720
    - Impact: increases failure probability
 
-2. **pressure**
-   - Mean |SHAP|: 1.1485
-   - Mean SHAP: -0.0487
+2. **temperature_roll_mean_6**
+   - Mean |SHAP|: 1.3180
+   - Mean SHAP: -0.1156
    - Impact: decreases failure probability
 
-3. **pressure_roll_mean_12**
-   - Mean |SHAP|: 0.9812
-   - Mean SHAP: 0.0810
-   - Impact: increases failure probability
-
-4. **vibration_roll_mean_6**
-   - Mean |SHAP|: 0.8587
-   - Mean SHAP: -0.0885
+3. **temperature**
+   - Mean |SHAP|: 1.1449
+   - Mean SHAP: -0.1184
    - Impact: decreases failure probability
 
-5. **vibration_roll_mean_12**
-   - Mean |SHAP|: 0.6539
-   - Mean SHAP: -0.0741
+4. **temperature_roll_mean_3**
+   - Mean |SHAP|: 0.7925
+   - Mean SHAP: -0.0935
+   - Impact: decreases failure probability
+
+5. **vibration_roll_mean_6**
+   - Mean |SHAP|: 0.7553
+   - Mean SHAP: -0.1273
    - Impact: decreases failure probability
 
 ======================================================================
@@ -94,8 +94,8 @@ temperature_roll_mean_12       0.271985  -0.003258  0.409764      1.519343    12
 ## Statistical Summary
 
 - **Total features analyzed:** 25
-- **Mean SHAP value range:** [-0.0885, 0.0810]
-- **Most variable feature:** temperature
+- **Mean SHAP value range:** [-0.1273, 0.1720]
+- **Most variable feature:** temperature_roll_mean_12
 - **Most consistent feature:** month
 
 ======================================================================

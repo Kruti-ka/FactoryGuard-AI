@@ -1,0 +1,7 @@
+{
+  "version": "20260204_171949",
+  "training_date": "2026-02-04T17:19:49.322888",
+  "f1_score": 0.85,
+  "recall": 0.89,
+  "feature_count": 25
+}

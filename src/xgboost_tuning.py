@@ -99,7 +99,40 @@ print(classification_report(y_test, y_pred_xgb))
 print(f"F1-Score: {f1_score(y_test, y_pred_xgb):.4f}")
 print(f"Recall: {recall_score(y_test, y_pred_xgb):.4f}")
 
-# Save the best model
-model_path = MODELS_DIR / 'xgboost_best.pkl'
+# Save the best model with versioning
+from datetime import datetime
+import json
+
+model_version = datetime.now().strftime("%Y%m%d_%H%M%S")
+versioned_model_path = MODELS_DIR / f'xgboost_best_v{model_version}.pkl'
+model_path = MODELS_DIR / 'xgboost_best.pkl'  # Keep for backward compatibility
+
+# Save versioned model
+joblib.dump(best_xgb, versioned_model_path)
+print(f"Versioned model saved to {versioned_model_path}")
+
+# Save current model (backward compatibility)
 joblib.dump(best_xgb, model_path)
 print(f"Model saved to {model_path}")
+
+# Save feature names
+feature_names_path = MODELS_DIR / 'feature_names.pkl'
+joblib.dump(feature_cols, feature_names_path)
+print(f"Feature names saved to {feature_names_path}")
+
+# Save model metadata
+metadata = {
+    "version": model_version,
+    "model_path": str(versioned_model_path),
+    "training_date": datetime.now().isoformat(),
+    "f1_score": float(f1_score(y_test, y_pred_xgb)),
+    "recall": float(recall_score(y_test, y_pred_xgb)),
+    "feature_count": len(feature_cols),
+    "best_params": random_search.best_params_,
+    "scale_pos_weight": float(scale_pos_weight)
+}
+
+metadata_path = MODELS_DIR / 'model_metadata.json'
+with open(metadata_path, 'w') as f:
+    json.dump(metadata, f, indent=2)
+print(f"Model metadata saved to {metadata_path}")

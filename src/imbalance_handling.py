@@ -5,13 +5,21 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, f1_score, recall_score
 from sklearn.model_selection import train_test_split
 import os
+from pathlib import Path
+
+# Get project root directory (parent of src directory)
+PROJECT_ROOT = Path(__file__).parent.parent
+DATA_PATH = PROJECT_ROOT / 'data' / 'processed' / 'model_ready_data.csv'
+REPORTS_DIR = PROJECT_ROOT / 'reports'
 
 # Load modeling-ready data
 try:
-    df = pd.read_csv('data/processed/model_ready_data.csv')
-    print("Data loaded successfully.")
+    df = pd.read_csv(DATA_PATH)
+    print(f"Data loaded successfully from: {DATA_PATH}")
 except FileNotFoundError:
-    print("Error: data/processed/model_ready_data.csv not found.")
+    print(f"Error: {DATA_PATH} not found.")
+    print(f"Current working directory: {os.getcwd()}")
+    print(f"Project root: {PROJECT_ROOT}")
     exit(1)
 
 # Prepare features and target
@@ -76,6 +84,7 @@ print("\nTop 10 Features:")
 print(feature_importance.head(10))
 
 # Save feature importance
-os.makedirs('reports', exist_ok=True)
-feature_importance.to_csv('reports/feature_importance_rf.csv', index=False)
-print("Feature importance saved to reports/feature_importance_rf.csv")
+os.makedirs(REPORTS_DIR, exist_ok=True)
+output_path = REPORTS_DIR / 'feature_importance_rf.csv'
+feature_importance.to_csv(output_path, index=False)
+print(f"Feature importance saved to {output_path}")

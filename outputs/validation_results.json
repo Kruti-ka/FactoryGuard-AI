@@ -1,0 +1,316 @@
+{
+  "timestamp": "2026-02-04T16:53:45.067570",
+  "summary_statistics": {
+    "total_features": 25,
+    "consistent": 8,
+    "inconsistent": 6,
+    "acceptable": 11,
+    "consistency_rate": 32.0
+  },
+  "validation_results": [
+    {
+      "feature": "temperature",
+      "mean_shap": 0.1743511702325895,
+      "actual_direction": "positive",
+      "expected_direction": "positive",
+      "status": "CONSISTENT",
+      "explanation": "Impact direction matches expectation (positive)"
+    },
+    {
+      "feature": "pressure",
+      "mean_shap": 0.0208088340008412,
+      "actual_direction": "positive",
+      "expected_direction": "mixed",
+      "status": "ACCEPTABLE",
+      "explanation": "Both directions physically plausible"
+    },
+    {
+      "feature": "vibration_roll_mean_12",
+      "mean_shap": 0.0192272699510965,
+      "actual_direction": "positive",
+      "expected_direction": "positive",
+      "status": "CONSISTENT",
+      "explanation": "Impact direction matches expectation (positive)"
+    },
+    {
+      "feature": "pressure_roll_mean_6",
+      "mean_shap": 0.0604087678522021,
+      "actual_direction": "positive",
+      "expected_direction": "mixed",
+      "status": "ACCEPTABLE",
+      "explanation": "Both directions physically plausible"
+    },
+    {
+      "feature": "vibration",
+      "mean_shap": 0.0433915192386821,
+      "actual_direction": "positive",
+      "expected_direction": "positive",
+      "status": "CONSISTENT",
+      "explanation": "Impact direction matches expectation (positive)"
+    },
+    {
+      "feature": "temperature_lag_3",
+      "mean_shap": -0.0552392298051388,
+      "actual_direction": "negative",
+      "expected_direction": "positive",
+      "status": "INCONSISTENT",
+      "explanation": "Expected positive, but model shows negative"
+    },
+    {
+      "feature": "vibration_roll_mean_3",
+      "mean_shap": 0.0064057476058781,
+      "actual_direction": "positive",
+      "expected_direction": "positive",
+      "status": "CONSISTENT",
+      "explanation": "Impact direction matches expectation (positive)"
+    },
+    {
+      "feature": "temperature_roll_mean_6",
+      "mean_shap": -0.0466414752102425,
+      "actual_direction": "negative",
+      "expected_direction": "positive",
+      "status": "INCONSISTENT",
+      "explanation": "Expected positive, but model shows negative"
+    },
+    {
+      "feature": "vibration_lag_1",
+      "mean_shap": -0.0323131437664795,
+      "actual_direction": "negative",
+      "expected_direction": "positive",
+      "status": "INCONSISTENT",
+      "explanation": "Expected positive, but model shows negative"
+    },
+    {
+      "feature": "vibration_roll_mean_6",
+      "mean_shap": 0.0134441138454141,
+      "actual_direction": "positive",
+      "expected_direction": "positive",
+      "status": "CONSISTENT",
+      "explanation": "Impact direction matches expectation (positive)"
+    },
+    {
+      "feature": "pressure_roll_mean_12",
+      "mean_shap": 0.0311726931937882,
+      "actual_direction": "positive",
+      "expected_direction": "mixed",
+      "status": "ACCEPTABLE",
+      "explanation": "Both directions physically plausible"
+    },
+    {
+      "feature": "hour",
+      "mean_shap": 0.0051853802182052,
+      "actual_direction": "positive",
+      "expected_direction": "mixed",
+      "status": "ACCEPTABLE",
+      "explanation": "Both directions physically plausible"
+    },
+    {
+      "feature": "temperature_roll_mean_3",
+      "mean_shap": 0.0468758337785426,
+      "actual_direction": "positive",
+      "expected_direction": "positive",
+      "status": "CONSISTENT",
+      "explanation": "Impact direction matches expectation (positive)"
+    },
+    {
+      "feature": "temperature_lag_2",
+      "mean_shap": -0.0394221948530034,
+      "actual_direction": "negative",
+      "expected_direction": "positive",
+      "status": "INCONSISTENT",
+      "explanation": "Expected positive, but model shows negative"
+    },
+    {
+      "feature": "pressure_roll_mean_3",
+      "mean_shap": 0.0257797976701169,
+      "actual_direction": "positive",
+      "expected_direction": "mixed",
+      "status": "ACCEPTABLE",
+      "explanation": "Both directions physically plausible"
+    },
+    {
+      "feature": "day",
+      "mean_shap": -0.0428779834745387,
+      "actual_direction": "negative",
+      "expected_direction": "mixed",
+      "status": "ACCEPTABLE",
+      "explanation": "Both directions physically plausible"
+    },
+    {
+      "feature": "vibration_lag_2",
+      "mean_shap": 0.0103496691526033,
+      "actual_direction": "positive",
+      "expected_direction": "positive",
+      "status": "CONSISTENT",
+      "explanation": "Impact direction matches expectation (positive)"
+    },
+    {
+      "feature": "pressure_lag_1",
+      "mean_shap": -0.008440357746087,
+      "actual_direction": "negative",
+      "expected_direction": "mixed",
+      "status": "ACCEPTABLE",
+      "explanation": "Both directions physically plausible"
+    },
+    {
+      "feature": "temperature_roll_mean_12",
+      "mean_shap": -0.0056856560212523,
+      "actual_direction": "negative",
+      "expected_direction": "positive",
+      "status": "INCONSISTENT",
+      "explanation": "Expected positive, but model shows negative"
+    },
+    {
+      "feature": "vibration_lag_3",
+      "mean_shap": -0.0002916203855516,
+      "actual_direction": "negative",
+      "expected_direction": "positive",
+      "status": "INCONSISTENT",
+      "explanation": "Expected positive, but model shows negative"
+    },
+    {
+      "feature": "pressure_lag_2",
+      "mean_shap": -0.0058368907960422,
+      "actual_direction": "negative",
+      "expected_direction": "mixed",
+      "status": "ACCEPTABLE",
+      "explanation": "Both directions physically plausible"
+    },
+    {
+      "feature": "temperature_lag_1",
+      "mean_shap": 0.0038104747163697,
+      "actual_direction": "positive",
+      "expected_direction": "positive",
+      "status": "CONSISTENT",
+      "explanation": "Impact direction matches expectation (positive)"
+    },
+    {
+      "feature": "pressure_lag_3",
+      "mean_shap": -0.0001403510220041,
+      "actual_direction": "negative",
+      "expected_direction": "mixed",
+      "status": "ACCEPTABLE",
+      "explanation": "Both directions physically plausible"
+    },
+    {
+      "feature": "day_of_week",
+      "mean_shap": -5.330760725258733e-05,
+      "actual_direction": "negative",
+      "expected_direction": "mixed",
+      "status": "ACCEPTABLE",
+      "explanation": "Both directions physically plausible"
+    },
+    {
+      "feature": "month",
+      "mean_shap": 0.0,
+      "actual_direction": "negative",
+      "expected_direction": "mixed",
+      "status": "ACCEPTABLE",
+      "explanation": "Both directions physically plausible"
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "HIGH_IMPORTANCE_INCONSISTENCY",
+      "feature": "temperature_lag_3",
+      "severity": "HIGH",
+      "description": "Important feature shows unexpected direction",
+      "mean_shap": -0.0552392298051388,
+      "expected": "positive",
+      "actual": "negative",
+      "recommendation": "Investigate data quality or feature engineering"
+    },
+    {
+      "type": "HIGH_IMPORTANCE_INCONSISTENCY",
+      "feature": "temperature_roll_mean_6",
+      "severity": "HIGH",
+      "description": "Important feature shows unexpected direction",
+      "mean_shap": -0.0466414752102425,
+      "expected": "positive",
+      "actual": "negative",
+      "recommendation": "Investigate data quality or feature engineering"
+    },
+    {
+      "type": "HIGH_IMPORTANCE_INCONSISTENCY",
+      "feature": "vibration_lag_1",
+      "severity": "HIGH",
+      "description": "Important feature shows unexpected direction",
+      "mean_shap": -0.0323131437664795,
+      "expected": "positive",
+      "actual": "negative",
+      "recommendation": "Investigate data quality or feature engineering"
+    },
+    {
+      "type": "TEMPERATURE_ROLLING_NEGATIVE",
+      "feature": "temperature_roll_mean_6",
+      "severity": "MEDIUM",
+      "description": "Temperature rolling mean shows negative impact on failure",
+      "mean_shap": -0.0466414752102425,
+      "expected": "positive",
+      "actual": "negative",
+      "recommendation": "Check for data normalization issues or multicollinearity"
+    },
+    {
+      "type": "TEMPERATURE_ROLLING_NEGATIVE",
+      "feature": "temperature_roll_mean_12",
+      "severity": "MEDIUM",
+      "description": "Temperature rolling mean shows negative impact on failure",
+      "mean_shap": -0.0056856560212523,
+      "expected": "positive",
+      "actual": "negative",
+      "recommendation": "Check for data normalization issues or multicollinearity"
+    },
+    {
+      "type": "VIBRATION_NEGATIVE",
+      "feature": "vibration_lag_1",
+      "severity": "MEDIUM",
+      "description": "Vibration shows negative impact (unexpected)",
+      "mean_shap": -0.0323131437664795,
+      "expected": "positive",
+      "actual": "negative",
+      "recommendation": "Verify sensor calibration and data preprocessing"
+    },
+    {
+      "type": "VIBRATION_NEGATIVE",
+      "feature": "vibration_lag_3",
+      "severity": "MEDIUM",
+      "description": "Vibration shows negative impact (unexpected)",
+      "mean_shap": -0.0002916203855516,
+      "expected": "positive",
+      "actual": "negative",
+      "recommendation": "Verify sensor calibration and data preprocessing"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "category": "Model Architecture",
+      "recommendation": "Consider feature engineering review - low consistency with physical expectations",
+      "rationale": "Only 32.0% of features show expected behavior"
+    },
+    {
+      "priority": "HIGH",
+      "category": "Data Quality",
+      "recommendation": "Investigate data quality for features showing counterintuitive behavior",
+      "rationale": "7 anomalies detected in feature impacts"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "Feature Engineering",
+      "recommendation": "Review temperature feature engineering and scaling",
+      "rationale": "Multiple temperature features show unexpected impact direction"
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "Model Interpretability",
+      "recommendation": "Consider domain expert review of feature impacts",
+      "rationale": "Validate model logic with maintenance engineers"
+    },
+    {
+      "priority": "LOW",
+      "category": "Model Enhancement",
+      "recommendation": "Explore non-linear models to capture complex physical relationships",
+      "rationale": "Linear model may not capture all physical dynamics"
+    }
+  ]
+}

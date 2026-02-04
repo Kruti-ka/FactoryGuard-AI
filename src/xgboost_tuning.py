@@ -6,16 +6,24 @@ from sklearn.metrics import classification_report, f1_score, recall_score
 from scipy.stats import randint, uniform
 import joblib
 import os
+from pathlib import Path
+
+# Get project root directory (parent of src directory)
+PROJECT_ROOT = Path(__file__).parent.parent
+DATA_PATH = PROJECT_ROOT / 'data' / 'processed' / 'model_ready_data.csv'
+MODELS_DIR = PROJECT_ROOT / 'models'
 
 # Ensure models directory exists
-os.makedirs('models', exist_ok=True)
+os.makedirs(MODELS_DIR, exist_ok=True)
 
 # Load modeling-ready data
 try:
-    df = pd.read_csv('data/processed/model_ready_data.csv')
-    print("Data loaded successfully.")
+    df = pd.read_csv(DATA_PATH)
+    print(f"Data loaded successfully from: {DATA_PATH}")
 except FileNotFoundError:
-    print("Error: data/processed/model_ready_data.csv not found.")
+    print(f"Error: {DATA_PATH} not found.")
+    print(f"Current working directory: {os.getcwd()}")
+    print(f"Project root: {PROJECT_ROOT}")
     exit(1)
 
 # Prepare features and target
@@ -92,5 +100,6 @@ print(f"F1-Score: {f1_score(y_test, y_pred_xgb):.4f}")
 print(f"Recall: {recall_score(y_test, y_pred_xgb):.4f}")
 
 # Save the best model
-joblib.dump(best_xgb, 'models/xgboost_best.pkl')
-print("Model saved to models/xgboost_best.pkl")
+model_path = MODELS_DIR / 'xgboost_best.pkl'
+joblib.dump(best_xgb, model_path)
+print(f"Model saved to {model_path}")
